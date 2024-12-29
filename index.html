@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Tienda de Iluminación</title>  
+</head>
+<body>
+    <header style="text-align: center;">       
+         <div >
+          <img src="./logo/logoTiendaLuz.avif" style="width:100px; height:100px"  alt=""  class="" />
+             <h1 class="Help-Desk">Disfruta de las mejores ofertas y preparate para el <b>Verano</b> </h1>
+        </div>
+        <div class="buscador-container">
+          <input type="text" id="cuadroBusqueda" placeholder="Buscar..." />
+          <button id="botonBusqueda">Buscar</button>
+        </div>
+          <nav>
+            <ul id="lista_nav">
+            <li>Inicio</li>
+            <li><a href="./pages/iluminacionInterior.html">Iluminación Interior</a></li>
+            <li><a href="./pages/iluminacionExterior.html">Iluminación Exterior</a></li>          
+            </ul>
+        </nav>      
+        </header>
+    <main>        
+    <div id="productos">   
+        <h1>Tienda de Productos</h1>    
+         <h2 class="subtitulo-home text-center"><i>Productos Destacados</i></h2>
+            <div class="producto">
+            <img src="./imagen/imagenPrincipal.jpg"  style="width: 500px; height: 700px;"  alt="lampara1">
+            <div class="card-body">
+                <h2 class="card-title" style="font-size: xx-large;">Todo en lamparas</h2>
+                 <p class="card-text" style="justify-content: center;">
+                    Envíos Gratis en el día ✓ Comprá Lamparas Originales en cuotas 
+                    sin interés! Conocé nuestras increíbles ofertas y promociones
+                     en millones de productos.</p>
+            </div>    
+           <div class="producto">
+            <div class="card col-2">
+                <img src="./imagen/lampara2.webp"  style="width: 200px; height: 200px;"  alt="lampara1">
+                <div class="card-body">
+                    <h2 class="card-title">Lampara para interiores</h2>
+                     <p class="card-text">
+                        Aplique Bidireccional Exterior Recto Aluminio Apto Led</p>
+            <span>Aplique - $500</span><br>
+            <span>Stock: <span id="stock-smartphone">15</span></span><br><br>
+            <button onclick="agregarAlCarrito('Smartphone', 500, 'smartphone')">Agregar</button>
+        </div>
+        <div class="producto">
+            <div class="card col-3">
+                <img src="./imagen/lampara3.webp"  style="width: 200px; height: 200px;"  alt="lampara1">
+                <div class="card-body">
+                    <h2 class="card-title">Lampara para interiores</h2>
+                     <p class="card-text">
+                        Aplique Bidireccional Exterior Recto Aluminio Apto Led</p>
+            <span>Tablet - $300</span><br>
+            <span>Stock: <span id="stock-tablet">8</span></span><br><br>
+            <button onclick="agregarAlCarrito('Tablet', 300, 'tablet')">Agregar</button>
+        </div><br><br><br>
+
+    <div id="carrito" class="card col-4">
+        <h2>Carrito de Compras</h2>
+        <ul id="lista-carrito"></ul>
+        <p>Subtotal: $<span id="subtotal-carrito">0</span></p>
+        <p>Descuento: $<span id="descuento-carrito">0</span></p>
+        <p>IVA (21%): $<span id="iva-carrito">0</span></p>
+        <p><strong>Total: $<span id="total-carrito">0</span></strong></p>
+        <button onclick="vaciarCarrito()">Vaciar Carrito</button>
+        <button onclick="mostrarCheckout()">Checkout</button>
+    </div>
+
+    <!-- Modal de Checkout -->
+    <div id="checkout-modal">
+        <div class="checkout-content">
+            <h2>Finalizar Compra</h2>
+            <p>Subtotal: $<span id="modal-subtotal">0</span></p>
+            <p>Descuento: $<span id="modal-descuento">0</span></p>
+            <p>IVA: $<span id="modal-iva">0</span></p>
+            <p><strong>Total a Pagar: $<span id="modal-total">0</span></strong></p>
+            <button onclick="realizarCompra()">Confirmar Compra</button>
+            <button onclick="cerrarCheckout()">Cancelar</button>
+        </div>
+    </div>
+
+
+    </main>
+    <footer>
+        <nav>
+          <i class="fa-brands fa-whatsapp" style="color: green;font-size: 40px;" title="wasap"></i>
+          <i class="fa-brands fa-instagram" style="color: red;font-size: 40px;" title="instagram"></i>
+          <i class="fa-brands fa-github sy" style="font-size: 40px;" title="github"></i>
+        </nav>
+      </footer>
+
+    <script src="js/app.js"></script>
+    <script src="https://kit.fontawesome.com/2067fe5f8f.js" crossorigin="anonymous"></script>
+</body>
+</html>
